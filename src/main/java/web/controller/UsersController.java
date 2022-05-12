@@ -39,6 +39,7 @@ public class UsersController {
         return "redirect:/getAll";
     }
 
+
     @GetMapping("/updateUser")
     public String updateUser(@RequestParam("userId") int id, Model model) {
         User user = userService.getById(id);
