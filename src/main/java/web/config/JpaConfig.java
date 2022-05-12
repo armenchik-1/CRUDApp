@@ -21,8 +21,11 @@ import java.util.Properties;
 @ComponentScan(value = "web")
 public class JpaConfig {
 
-    @Autowired
     private Environment env;
+
+    public JpaConfig(Environment env) {
+        this.env = env;
+    }
 
     @Bean
     public DataSource getDataSource() {
